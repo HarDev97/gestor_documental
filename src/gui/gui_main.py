@@ -64,8 +64,10 @@ class Frame(tk.Frame):
             confirm = messagebox.askquestion(
                 "Confirmación", "¿Deseas guardar el registro?"
             )
-            if confirm:
+            if "yes" == confirm:
                 messagebox.showinfo("Éxito", "El registro se guardó correctamente.")
+            else:
+                messagebox.showwarning("Cancelado", "El registro no se guardó.")
 
         else:
             messagebox.showerror("Error", "Ambos campos deben tener un valor.")
