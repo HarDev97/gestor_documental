@@ -1,5 +1,7 @@
-import tkinter as tk
 from PIL import Image, ImageTk
+from gui.gui_main import Frame
+
+import tkinter as tk
 from config import APP_TITLE, LOGO_PATH
 
 
@@ -18,12 +20,8 @@ def main():
     root.resizable(0, 0)
 
     # Creando frame
-    frame = tk.Frame(root)
-    frame.pack()
-    # Configurando frame
-    frame.config(width=500, height=500, background="dark blue")
-
-    root.mainloop()
+    app = Frame(root=root)
+    app.mainloop()
 
 
 if __name__ == "__main__":
