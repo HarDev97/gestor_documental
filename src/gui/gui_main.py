@@ -8,7 +8,7 @@ class Frame(tk.Frame):
     # Definiendo constructor
     def __init__(self, root=None):
         # Heredando
-        super().__init__(root, width=1200, height=100)
+        super().__init__(root, width=1200, height=800)
         self.root = root
         self.pack()
         self.config(bg="#aeb6bf")
