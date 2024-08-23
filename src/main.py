@@ -1,5 +1,5 @@
 from PIL import Image, ImageTk
-from gui.gui_main import Frame
+from gui.gui_main import Frame, navbar
 
 import tkinter as tk
 from config import APP_TITLE, LOGO_PATH
@@ -18,6 +18,9 @@ def main():
 
     # Definiendo si es resizable
     root.resizable(0, 0)
+
+    # Invocando menu
+    navbar(root)
 
     # Creando frame
     app = Frame(root=root)
