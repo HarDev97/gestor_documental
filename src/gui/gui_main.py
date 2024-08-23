@@ -13,6 +13,7 @@ class Frame(tk.Frame):
         self.pack()
         # self.config(bg="gray")
         self.form()
+        self.gridview()
 
     # Creando formulario
     def form(self):
@@ -39,16 +40,16 @@ class Frame(tk.Frame):
         self.entry_serie.grid(row=1, column=1, padx=10, pady=10)
 
         # Definiendo botones
-        self.button_new = tk.Button(self, text="Guardar", command=self.save)
+        self.button_new = tk.Button(self, text="Registrar", command=self.save)
         self.button_new.config(
             width=20,
             font=("Arial", 12, "bold"),
-            fg="#dad5d6",
-            bg="#158645",
+            fg="white",
+            bg="#188251",
             cursor="hand2",
             activebackground="#35bd6f",
         )
-        self.button_new.grid(row=4, column=0, padx=10, pady=10)
+        self.button_new.grid(row=2, column=0, padx=10, pady=10)
 
     # Guardar datos
     def save(self):
@@ -68,6 +69,43 @@ class Frame(tk.Frame):
 
         else:
             messagebox.showerror("Error", "Ambos campos deben tener un valor.")
+
+    # Vista de datos
+    def gridview(self):
+        self.table = ttk.Treeview(self, columns=("TRD", "Serie"))
+        self.table.grid(row=3, column=0, columnspan=2)
+
+        # Definiendo encabezado
+        self.table.heading("#0", text="#")
+        self.table.heading("#1", text="TRD")
+        self.table.heading("#2", text="Serie")
+
+        # Agregando valores de muestra
+        self.table.insert("", 0, text="1", values=("2015", "23"))
+
+        # Agregando botones de editar y eliminar
+        self.button_edit = tk.Button(self, text="Editar")
+        self.button_edit.config(
+            width=20,
+            font=("Arial", 12, "bold"),
+            fg="white",
+            bg="#0d6efd",
+            cursor="hand2",
+            activebackground="#35bd6f",
+        )
+        self.button_edit.grid(row=5, column=0, padx=10, pady=10)
+
+        # Agregando botones de editar y eliminar
+        self.button_delete = tk.Button(self, text="Eliminar")
+        self.button_delete.config(
+            width=20,
+            font=("Arial", 12, "bold"),
+            fg="white",
+            bg="#bb2d3b",
+            cursor="hand2",
+            activebackground="#35bd6f",
+        )
+        self.button_delete.grid(row=5, column=1, padx=10, pady=10)
 
     # Limpiando campos
     def clean_fields(self):
