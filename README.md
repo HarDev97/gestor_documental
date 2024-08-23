@@ -6,25 +6,16 @@ Proyecto de código abierto desarrollado en linux con el propósito de crear un 
 
 ```mermaid
 document_manager/
-├── docs/
-│ └── readme.md
 ├── src/
 │ ├── main.py
 │ ├── config.py
 │ ├── gui/
 │ │ ├── __init__.py
-│ │ ├── ventana_principal.py
-│ │ ├── ventana_secundaria.py
+│ │ ├── gui_main.py
 │ └── database/
 │ ├── **init**.py
 │ ├── conexion.py
 │ ├── modelos.py
-├── tests/
-│ ├── **init**.py
-│ ├── test_gui.py
-│ ├── test_database.py
-├── data/
-│ └── ejemplo.db
 ├── assets/
 │ ├── images/
 │ │ └── logo.png
