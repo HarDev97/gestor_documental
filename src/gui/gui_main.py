@@ -50,6 +50,7 @@ class Frame(tk.Frame):
         )
         self.button_new.grid(row=4, column=0, padx=10, pady=10)
 
+    # Guardar datos
     def save(self):
         # Obtener el valor seleccionado
         value_trd = self.entry_trd.get()
