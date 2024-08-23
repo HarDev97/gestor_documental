@@ -17,8 +17,7 @@ def main():
     root.iconphoto(False, icon)
 
     # Definiendo si es resizable
-    root.resizable(0, 0)
-
+    # root.resizable(0, 0)
     # Invocando menu
     navbar(root)
 
