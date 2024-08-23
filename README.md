@@ -12,7 +12,7 @@ document_manager/
 │ ├── main.py
 │ ├── config.py
 │ ├── gui/
-│ │ ├── **init**.py
+│ │ ├── __init__.py
 │ │ ├── ventana_principal.py
 │ │ ├── ventana_secundaria.py
 │ └── database/
