@@ -1,5 +1,6 @@
 from PIL import Image, ImageTk
 from gui.gui_main import Frame, navbar
+from model.connection import *
 
 import tkinter as tk
 from config import APP_TITLE, LOGO_PATH
@@ -23,6 +24,9 @@ def main():
 
     # Creando frame
     app = Frame(root=root)
+
+    users = Connection()
+
     app.mainloop()
 
 

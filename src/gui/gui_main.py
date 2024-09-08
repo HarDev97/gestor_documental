@@ -5,6 +5,7 @@ from tkinter import messagebox
 
 # Creando interfaz
 class Frame(tk.Frame):
+
     # Definiendo constructor
     def __init__(self, root=None):
         # Heredando
@@ -12,7 +13,7 @@ class Frame(tk.Frame):
         self.root = root
         self.pack()
         self.config(bg="#aeb6bf")
-        self.root.geometry("1200x800")
+        # self.root.geometry("1200x800")
         self.form()
         self.gridview()
 

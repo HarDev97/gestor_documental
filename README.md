@@ -15,7 +15,9 @@ document_manager/
 │ └── database/
 │ ├── **init**.py
 │ ├── conexion.py
-│ ├── modelos.py
+│ ├── model/
+│ │ ├── __init__.py
+│ │ ├── connection.py
 ├── assets/
 │ ├── images/
 │ │ └── logo.png
@@ -68,4 +70,20 @@ Ejecuta en la terminal el comando:
 
 ```bash
 pip install pillow
+```
+
+### 2.3 Instalar paquete dotenv y decuple:
+
+Ejecuta en la terminal el comando:
+
+```bash
+pip install python-dotenv python-decouple
+```
+
+### 2.4 Instalar paquete psycopg2:
+
+Ejecuta en la terminal el comando:
+
+```bash
+pip install psycopg2
 ```

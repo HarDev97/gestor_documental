@@ -1,2 +1,3 @@
 #Compilados
 src/_pycache_/*
+.env
